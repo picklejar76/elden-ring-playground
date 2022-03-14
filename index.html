@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+    <title>Elden Ring - Progression</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: white; font-family: Candara, 'Lora', serif; }
+        svg { background-color: #d0d0d0 }
+        text { text-anchor: middle; alignment-baseline: middle; }
+        rect { rx: 10; ry: 10; filter:url(#dropshadow); }
+        rect.loc { fill: white; }
+        text.loc { fill: #202020; }
+        line.dep { stroke: #a0a0a0; stroke-width:2; }
+        line.xor { stroke: #ffff80; stroke-width:2; }
+        line.fog { stroke: #ffb23e; stroke-width:4; }
+        rect.kil { fill: #ff8080; }
+        text.kil { fill: #802020; }
+        rect.maj { fill: #80ff80; }
+        text.maj { fill: #208020; }
+        rect.key { fill: #ffff80; }
+        text.key { fill: #808020; }
+    </style>
+</html>
+<body>
+
+    <h1>Elden Ring Progression</h1>
+
+    <h2>Simple Version</h2>
+
+    <svg width="2500" height="2200">
+
+        <!-- used to create backdrop shadows on rects etc. -->
+        <filter id="dropshadow" height="130%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge> 
+              <feMergeNode/> <!-- this contains the offset blurred image -->
+              <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+          </filter>
+
+        <g transform="translate(100,25)">
+
+            <!-- Limgrave ... Godrick -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Limgrave</text>
+                <text class="loc" x="100" y="35">(1-30)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Stormveil Castle</text>
+                <text class="loc" x="100" y="35">(30-40)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,150)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">Margit</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">GODRICK</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Godrick's</text>
+                <text class="key" x="100" y="35">Great Rune</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+                <line class="dep" x1="100" y1="75" x2="475" y2="75" />
+                <line class="dep" x1="475" y1="75" x2="475" y2="100" />
+            </g>
+
+        </g>
+
+        <g transform="translate(350,25)">
+
+            <!-- Liurnia of the Lakes ... Rennala -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Liurnia of the Lakes</text>
+                <text class="loc" x="100" y="35">(40-50)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Raya Lucaria Academy</text>
+                <text class="loc" x="100" y="35">(50-60)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,150)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">Red Wolf of Radagon</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">RENNALA</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Great Rune</text>
+                <text class="key" x="100" y="35">of the Unborn</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+            </g>
+
+        </g>
+
+        <g transform="translate(600,25)">
+
+            <!-- ... Caelid ... Radahn -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Siofra River</text>
+                <text class="loc" x="100" y="35">(50-60)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Caelid</text>
+                <text class="loc" x="100" y="35">(60-70)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="150" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">RADAHN</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Radahn's</text>
+                <text class="key" x="100" y="35">Great Rune</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+            </g>
+
+        </g>
+
+        <g transform="translate(850,25)">
+
+            <!-- Mt. Gelmir ... Rykard -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Mt. Gelmir</text>
+                <text class="loc" x="100" y="35">(70-80)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Volcano Manor</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,150)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="15">God-Devouring</text>
+                <text class="kil" x="100" y="35">Serpent</text>
+                <line class="dep" x1="97" y1="50" x2="97" y2="100" />
+                <line class="dep" x1="103" y1="50" x2="103" y2="100" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">RYKARD</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Rykard's</text>
+                <text class="key" x="100" y="35">Great Rune</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+                <line class="dep" x1="100" y1="75" x2="-275" y2="75" />
+                <line class="dep" x1="-275" y1="75" x2="-275" y2="100" />
+            </g>
+
+        </g>
+
+
+        <g transform="translate(1200,25)">
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Fia's Questline</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,75)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Mending Rune</text>
+                <text class="key" x="100" y="35">of the Death Prince</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,150)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">Enables optional ending</text>
+                <text class="maj" x="100" y="35">AGE OF DUSKBORN</text>
+            </g>
+        </g>
+
+        <g transform="translate(1450,25)">
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Goldmask's Questline</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,75)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Mending Rune</text>
+                <text class="key" x="100" y="35">of Perfect Order</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,150)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">Enables optional ending</text>
+                <text class="maj" x="100" y="35">AGE OF ORDER</text>
+            </g>
+        </g>
+
+        <g transform="translate(1200,300)">
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Dung Eater's Questline</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,75)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Mending Rune</text>
+                <text class="key" x="100" y="35">of the Fell Curse</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,150)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">Enables optional ending</text>
+                <text class="maj" x="100" y="35">BLESSING OF DESPAIR</text>
+            </g>
+        </g>
+
+        <g transform="translate(1450,300)">
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Gideon's Questline ???</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,75)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Mending Rune</text>
+                <text class="key" x="100" y="35">of Knowledge ???</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,150)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">Enables optional ending</text>
+                <text class="maj" x="100" y="35">AGE OF INSIGHT ???</text>
+            </g>
+        </g>
+
+        <g transform="translate(1200,575)">
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Melina's Questline,</text>
+                <text class="loc" x="100" y="35">Join the Three Fingers</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,75)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Inherit the</text>
+                <text class="key" x="100" y="35">Frenzied Flame</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,150)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">Ending changes to LORD</text>
+                <text class="maj" x="100" y="35">OF THE FRENZIED FLAME</text>
+            </g>
+        </g>
+
+        <g transform="translate(1450,575)">
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">???</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,75)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Save the Erdtree</text>
+                <text class="key" x="100" y="35">with Melina ???</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+            <g transform="translate(0,150)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">Enables ending</text>
+                <text class="maj" x="100" y="35">AGE OF THE ERDTREE ???</text>
+            </g>
+        </g>
+
+
+
+
+        <g transform="translate(475,425)">
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Get at least 2 Great Runes</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+                <line class="dep" x1="100" y1="75" x2="-275" y2="75" />
+                <line class="dep" x1="-275" y1="75" x2="-275" y2="100" />
+            </g>
+        </g>
+
+        <g transform="translate(100,525)">
+
+            <!-- Lyndell, Royal Capital -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Lyndell, Royal Capital</text>
+                <text class="loc" x="100" y="35">(80-90)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="250" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">GODFREY, Golden Shade</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">MORGOTT</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,375)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Morgott's</text>
+                <text class="key" x="100" y="35">Great Rune</text>
+            </g>
+
+        </g>
+
+        <g transform="translate(350,525)">
+
+            <!-- Forbidden Lands -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Forbidden Lands</text>
+                <text class="loc" x="100" y="35">(90-100)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Mountaintops of the Giants</text>
+                <text class="loc" x="100" y="35">(90-100)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,150)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Consecrated Snowfield</text>
+                <text class="loc" x="100" y="35">(90-100)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Mohgwyn Palace</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">MOGH</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,375)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Mogh's</text>
+                <text class="key" x="100" y="35">Great Rune</text>
+            </g>
+
+        </g>
+
+        <g transform="translate(600,525)">
+
+            <!-- Forbidden Lands -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Miquella's Haligtree</text>
+                <text class="loc" x="100" y="35">(90-100)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">Loretta</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="200" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Elphael,</text>
+                <text class="loc" x="100" y="35">Brace of the Haligtree</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">MALENIA</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,375)">
+                <rect class="key" x="0" y="0" width="200" height="50"></rect>
+                <text class="key" x="100" y="15">Malenia's</text>
+                <text class="key" x="100" y="35">Great Rune</text>
+            </g>
+
+        </g>
+
+        <g transform="translate(850,525)">
+
+            <!-- Crumbling Farum Azula -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Crumbling Farum Azula</text>
+                <text class="loc" x="100" y="35">(100)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">Godskin Duo</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="150" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">Beast Clergyman</text>
+                <line class="dep" x1="97" y1="50" x2="97" y2="100" />
+                <line class="dep" x1="103" y1="50" x2="103" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">MALIKETH</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+            </g>
+
+        </g>
+
+        <g transform="translate(850,900)">
+
+            <!-- Lyndell, Capital of Ash -->
+
+            <g transform="translate(0,0)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="15">Lyndell, Capital of Ash</text>
+                <text class="loc" x="100" y="35">(100)</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,75)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="15">SIR GIDEON OFNIR,</text>
+                <text class="kil" x="100" y="35">the All-Knowing</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,150)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="15">GODFREY,</text>
+                <text class="kil" x="100" y="35">First Elden Lord</text>
+                <line class="dep" x1="97" y1="50" x2="97" y2="100" />
+                <line class="dep" x1="103" y1="50" x2="103" y2="100" />
+            </g>
+
+            <g transform="translate(0,225)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="15">HOARAH LOUX,</text>
+                <text class="kil" x="100" y="35">Warrior</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="100" />
+            </g>
+
+            <g transform="translate(0,300)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="15">RADAGON</text>
+                <text class="kil" x="100" y="35">of the Golden Order</text>
+                <line class="dep" x1="97" y1="50" x2="97" y2="100" />
+                <line class="dep" x1="103" y1="50" x2="103" y2="100" />
+            </g>
+
+            <g transform="translate(0,375)">
+                <rect class="kil" x="0" y="0" width="200" height="50"></rect>
+                <text class="kil" x="100" y="25">ELDEN BEAST</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+            </g>
+
+            <g transform="translate(0,450)">
+                <rect class="loc" x="0" y="0" width="200" height="50"></rect>
+                <text class="loc" x="100" y="25">Choose final action</text>
+                <line class="dep" x1="100" y1="50" x2="100" y2="75" />
+            </g>
+
+            <g transform="translate(0,525)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">Regular Ending:</text>
+                <text class="maj" x="100" y="35">AGE OF FRACTURE</text>
+            </g>
+
+            <g transform="translate(475,525)">
+                <rect class="maj" x="0" y="0" width="200" height="50"></rect>
+                <text class="maj" x="100" y="15">ALTERNATE</text>
+                <text class="maj" x="100" y="35">ENDINGS</text>
+            </g>
+
+
+        </g>
+
+    </svg>
+
+</body>
